@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-sans: "Manrope", "Segoe UI", system-ui, sans-serif;
+
+  --color-bg: #0c0b0a;
+  --color-surface: #141210;
+  --color-elevated: #1c1916;
+  --color-fg: #f3efe8;
+  --color-muted: #9a9388;
+  --color-subtle: #6f6a63;
+  --color-steel: #c5cdd6;
+  --color-primary: #f3efe8;
+  --color-primary-fg: #0c0b0a;
+  --color-border: #2a2724;
+  --color-ring: #c5cdd6;
+  --color-danger: #c45c4a;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-card: 0 0 0 1px rgba(243, 239, 232, 0.08);
+  --shadow-card-hover: 0 0 0 1px rgba(243, 239, 232, 0.14);
+
+  --ease-out-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-steel);
+    color: var(--color-bg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .stagger-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.stagger-in {
+  opacity: 0;
+  animation: fade-up 500ms var(--ease-out-smooth) forwards;
+}
+
+.stagger-in:nth-child(1) {
+  animation-delay: 40ms;
+}
+.stagger-in:nth-child(2) {
+  animation-delay: 120ms;
+}
+.stagger-in:nth-child(3) {
+  animation-delay: 200ms;
+}
+.stagger-in:nth-child(4) {
+  animation-delay: 280ms;
+}
+.stagger-in:nth-child(5) {
+  animation-delay: 360ms;
+}
+
+.edge-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--color-steel) 55%, transparent),
+    transparent
+  );
+}

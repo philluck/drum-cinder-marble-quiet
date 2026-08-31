@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ТУПЫХ.NET — заточка ножей и инструмента в Иркутске",
+      "hasCanvas": false,
+      "bodyTextLen": 2950,
+      "bodyTextHash": "4712516cc623a4907a7a7ff0185b3637a183ae87a76ca501fe463ee124e0c6f9",
+      "bodyTextPrefix": "ТУПЫХ.NET Прайс Как сдать Клуб Контакты +7 924 706-59-21 ИРКУТСК",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ТУПЫХ.NET — заточка ножей и инструмента в Иркутске",
+      "hasCanvas": false,
+      "bodyTextLen": 3045,
+      "bodyTextHash": "1b9ddee8a59495a3571f9bbbf39e626aadefeafa681619642b4f24a48fded2b5",
+      "bodyTextPrefix": "ТУПЫХ.NET ИРКУТСК · РОМАН ТОЧИЛЬЩИКОВ Если тупое — сюда Професси",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
